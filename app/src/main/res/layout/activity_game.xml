@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <SurfaceView
+        android:id="@+id/mSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_above="@id/linearLayout"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:paddingBottom="10dp">
+        >
+
+        <ImageView
+            android:id="@+id/up_iv"
+            android:layout_above="@id/linearLayout1"
+            android:layout_width="50dp"
+            android:layout_marginTop="30dp"
+            android:onClick="changeSnakeDirection"
+            android:tag="top"
+            android:background="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/up"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_above="@id/bottom_iv"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:src="@drawable/left"
+                android:tag="left"
+                android:background="@android:color/white"
+                android:onClick="changeSnakeDirection"
+                android:layout_marginRight="25dp"
+                android:layout_height="50dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:background="@android:color/white"
+                android:onClick="changeSnakeDirection"
+                android:tag="right"
+                android:src="@drawable/right"
+                android:layout_marginLeft="25dp"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bottom_iv"
+            android:layout_width="50dp"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/white"
+            android:onClick="changeSnakeDirection"
+            android:tag="bottom"
+            android:src="@drawable/bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
